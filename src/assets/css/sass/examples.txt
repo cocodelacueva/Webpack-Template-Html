@@ -1,0 +1,52 @@
+@media (min-width: $md) {}
+-webkit-
+-moz-
+-ms-
+-o-
+
+display: flex;
+display: -o-flex;
+display: -ms-flex;
+display: -moz-flex;
+display: -webkit-flex;
+-webkit-align-items: center;
+-moz-align-items: center;
+-ms-align-items: center;
+-o-align-items: center;
+align-items: center;
+-webkit-justify-content: center;
+-moz-justify-content: center;
+-ms-justify-content: center;
+-o-justify-content: center;
+justify-content: center;
+
+-webkit-justify-content: space-between;
+-moz-justify-content: space-between;
+-ms-justify-content: space-between;
+-o-justify-content: space-between;
+justify-content: space-between;
+
+
+&:hover {
+  zoom: 1;
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+
+<picture>
+  <source srcset="mdn-logo.svg" type="image/svg+xml">
+  <source srcset="assets/images/intel-logo-blanco.png 1x, assets/images/intel-logo-blanco@2x.png 2x" media="(min-width: 300px)">
+  <img src="assets/images/intel-logo-blanco.png" alt="Intel Logo">
+</picture>
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min--moz-device-pixel-ratio: 1.5), only screen and (min-resolution: 240dpi) {
+  background-image: url(../images/header-bk-360@2x.jpg);
+  background-size: cover;
+}
+
+@media (min-width: $xs) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: $xs) and (min--moz-device-pixel-ratio: 1.5), (min-width: $xs) and (min-resolution: 240dpi) {
+  background-image: url(../images/header-bk-1024@2x.jpg);
+  background-size: cover;
+  background-position: right center;
+}

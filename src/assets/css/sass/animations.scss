@@ -1,0 +1,114 @@
+ /*
+  * ANIMATIONS
+ */
+@keyframes blinking {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+}
+
+ //slide down flecha header
+ .movil-element.slide-down.in-view {
+	animation-name: slide-down;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-down {
+	from {opacity: 0;transform:translateY(0);}
+	to {opacity: 1;transform:translateY(30px);}
+}
+
+.animate-element {
+	opacity: 0;
+}
+
+.animate-element.slide-down-x2.in-view {
+	opacity: 0;
+	animation-name: slide-down;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-down-x2 {
+	from {opacity: 0;transform:translateY(-10%);}
+	to {opacity: 1;transform:translateY(0);}
+}
+
+.animate-element.slide-up.in-view {
+	opacity: 0;
+	animation-name: slide-up;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+.animate-element.slide-up-list.in-view {
+	opacity: 0;
+	animation-name: slide-up;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-up {
+	from {opacity: 0;transform:translateY(30%);}
+	to {opacity: 1;transform:translateY(0);}
+}
+
+.animate-element.slide-left.in-view {
+	opacity: 0;
+	animation-name: slide-left;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-left {
+	from {opacity: 0;transform:translateX(-50%);}
+        to {opacity: 1;transform:translateX(0);}
+}
+
+.animate-element.slide-right.in-view {
+	opacity: 0;
+	animation-name: slide-right;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-right {
+	from {opacity: 0;transform:translateX(50%);}
+    to {opacity: 1;transform:translateX(0);}
+}
+
+
+
+
+//galeria
+.background-more-info.open-background {
+	animation-name: fade-in;
+	opacity: 0;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	display: flex;
+	display: -o-flex;
+	display: -ms-flex;
+	display: -moz-flex;
+	display: -webkit-flex;
+	/*-webkit-align-items: center;
+	-moz-align-items: center;
+	-ms-align-items: center;
+	-o-align-items: center;
+	align-items: center;*/
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	-o-justify-content: center;
+	justify-content: center;
+}
+
+@keyframes fade-in {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
