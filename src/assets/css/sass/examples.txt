@@ -50,3 +50,29 @@ justify-content: space-between;
   background-size: cover;
   background-position: right center;
 }
+
+3x
+@media only screen and (-webkit-min-device-pixel-ratio: 2.25), only screen and (min--moz-device-pixel-ratio: 2.25), only screen and (min-resolution: 2.25dppx) {
+  background-image: url(../images/header-bk-360@2x.jpg);
+  background-size: cover;
+}
+
+@media (min-width: $xs) and (-webkit-min-device-pixel-ratio: 2.25), (min-width: $xs) and (min--moz-device-pixel-ratio: 2.25), (min-width: $xs) and (min-resolution: 2.25dppx) {
+  background-image: url(../images/header-bk-1024@2x.jpg);
+  background-size: cover;
+  background-position: right center;
+}
+
+@1x image (Pixel Ratio 1.0)
+@2x image (Pixel Ratio of 1.25+)
+@3x image (Pixel Ratio of 2.25+)
+@4x image (Pixel Ratio of 3.25+)
+
+/* @2x Images (Pixel Ratio of 1.25+) */
+@media only screen and (-o-min-device-pixel-ratio: 5/4),
+       only screen and (-webkit-min-device-pixel-ratio: 1.25),
+       only screen and (min--moz-device-pixel-ratio: 1.25),
+       only screen and (min-device-pixel-ratio: 1.25),
+       only screen and (min-resolution: 1.25dppx) {
+    #dgst_shopping_bag {background-image:url(img/shopping_bag@2x.png);}
+}
