@@ -57,6 +57,9 @@ module.exports = {
             //procesamiento de imágenes
             {
                 test: /\.(png|svg|jpe?g|gif)$/i,
+                include: [
+                    path.resolve(__dirname, 'src/assets/images')
+                ],
                 use : {
                     loader: 'file-loader',
                     options: {
@@ -67,7 +70,10 @@ module.exports = {
             },
             //procesamiento de tipografías
             {
-                test: /\.(woff|woff2|otf|eot|ttf)$/,
+                test: /\.(woff|woff2|otf|eot|ttf|svg)$/,
+                include: [
+                    path.resolve(__dirname, 'src/assets/fonts')
+                ],
                 use : {
                     loader: 'file-loader',
                     options: {
