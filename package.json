@@ -1,7 +1,7 @@
 {
-  "name": "intel-flix-9900ks",
+  "name": "title-name",
   "version": "1.0.0",
-  "description": "Landing EX Page for Intel",
+  "description": "Description",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
     "build": "webpack"
   },
   "keywords": [],
-  "author": "Portinos",
+  "author": "coco",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.7.2",

@@ -9,6 +9,9 @@ module.exports = {
         path: path.resolve(__dirname, 'public'),
         filename: 'assets/js/bundle.js',
     },
+    /*optimization: {
+        minimize: false
+    },*/
 
     //servidor de desarrollo
     devServer : {
