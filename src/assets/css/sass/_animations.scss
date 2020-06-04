@@ -1,0 +1,12 @@
+ //slide down flecha header
+ .movil-element.slide-down.in-view {
+	animation-name: slide-down;
+	animation-duration: 1s;
+	animation-delay: 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes slide-down {
+	from {opacity: 0;transform:translateY(0);}
+	to {opacity: 1;transform:translateY(30px);}
+}

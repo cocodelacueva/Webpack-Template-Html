@@ -1,48 +1,16 @@
-/*--------------------------------------------------------------
-1.0 Reset
---------------------------------------------------------------*/
-
 @import 'sass/reset';
-
-/*--------------------------------------------------------------
-2.0 Fuentes
---------------------------------------------------------------*/
-
 @import 'sass/fonts';
-
-/*--------------------------------------------------------------
-3.0 variables
---------------------------------------------------------------*/
-
 @import 'sass/variables';
-
-/*--------------------------------------------------------------
-4.0 helpers
---------------------------------------------------------------*/
-
 @import 'sass/helpers';
 
-/*--------------------------------------------------------------
-5.0 MAIN CSS
---------------------------------------------------------------*/
-
-.main-wrapper {
+.site-wrapper {
     position: relative;
     z-index: 1;
-    width: 500px;
-    max-width: 1000px;
     margin: 0;
     font-family: $fuente-principal;
-    font-size: 14px;
-    line-height: 16px;
-    font-weight: 300;
-    background-color: $color-negro;
-    color: $color-blanco;
-    @media (min-width: $xs) {
-        width: 100%;
-    }
-    @media (min-width: $sm) {
-        font-size: 14px;
-        line-height: 16px;
-    }
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 400;
+    background-color: $color-blanco;
+    color: $color-negro;
 }//.main-wrapper

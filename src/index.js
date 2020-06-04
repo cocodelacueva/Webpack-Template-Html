@@ -1,3 +1,3 @@
 import './assets/css/style.scss';
 
-console.log('oki doky')
+console.log('script')
