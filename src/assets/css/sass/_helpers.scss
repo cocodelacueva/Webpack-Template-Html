@@ -1,4 +1,5 @@
 .video-wrapper {
+    position: relative;
     padding-bottom: calc(var(--aspect-ratio, .5625) * 100%); 
     //html video-wrapper must have: style="--aspect-ratio: 3 / 4;"
 
