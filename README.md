@@ -72,3 +72,8 @@ Lo que hace es cargar como string un html. Por lo que permite utilizarlo en js. 
 ```
 <%= require('html-loader!./partial.html') %>
 ````
+## Dividir codigo
+
+Esto permite dividir el bundle script si es muy grande. Hay muchísimas opciones y depende un poco el trabajo que se está haciendo.  
+
+LEER: https://webpack.js.org/guides/code-splitting/  
