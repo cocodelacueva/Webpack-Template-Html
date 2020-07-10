@@ -4,16 +4,16 @@ Para trabajar con html sencillo, tipo landing pages. Permite la transpilación d
 
 ## Pluggins dev incluídos
 
-A grandes rasgos:
-WEBPACK: Archivo principal, trae el cli y el server para develop
-BABEL: Permite trasnspilar la nueva version de js a las viejas versiones para usarla sin problemas
-AUTOPREFIXER: Genera los prefixer de css necesarios para todos los navegadores indicados
-SASS LOADER, para manejar sass.
-FILE-LOADER, para manejar archivos, como imágenes, tipografías, etc.
-CSS LOADER, maneja los estilos
-COPYWEBPACKPLUGIN: Copia las todas las imagenes a la carpeta public
-HTMLWEBPACKPLUGIN: crea el archivo html y le agrega el link a estilos y el link de script
-MINICSSEXTRACTPLUGIN: extrae el css para colocarlo en un archivo style.css separado del js
+A grandes rasgos:  
+WEBPACK: Archivo principal, trae el cli y el server para develop  
+BABEL: Permite trasnspilar la nueva version de js a las viejas versiones para usarla sin problemas  
+AUTOPREFIXER: Genera los prefixer de css necesarios para todos los navegadores indicados  
+SASS LOADER, para manejar sass.  
+FILE-LOADER, para manejar archivos, como imágenes, tipografías, etc.  
+CSS LOADER, maneja los estilos  
+COPYWEBPACKPLUGIN: Copia las todas las imagenes a la carpeta public  
+HTMLWEBPACKPLUGIN: crea el archivo html y le agrega el link a estilos y el link de script  
+MINICSSEXTRACTPLUGIN: extrae el css para colocarlo en un archivo style.css separado del js  
 
 ### Detalle:   
 * @babel/core
