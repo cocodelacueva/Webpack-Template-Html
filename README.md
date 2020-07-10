@@ -60,34 +60,15 @@ module.exports = {
 }
 ```
 
-### File Include Webpack pluggin
+### html-loader
 
-Este permite crear templates de html, por ejemplo navbar e incluirlo en cualquier lado del html cuando se construye con npm run build. Funciona como el include de php, pero lo incluye al construir el sitio.
+Lo que hace es cargar como string un html. Por lo que permite utilizarlo en js. Pero utilizándolo en el html permite crear templates parciales, por ejemplo navbar e incluirlo en cualquier lado del html cuando se construye con npm run build. Funciona como el include de php, pero lo incluye al construir el sitio.
 
-* URL: https://github.com/Vishal0203/file-include-webpack-plugin
-* INSTALAR: npm install --save-dev file-include-webpack-plugin
-* USO: Crear otra carpeta junto a html que sea templates y allí poner los html que se van a tomar como template
-* Incluir templates en un html: 
 
-```@@include('../templates/header.html')```
-
-* webpack.config.js (ponerlo debajo de HtmlWebpackPlugin): 
-
+* URL: https://webpack.js.org/loaders/html-loader/
+* EJEMPLO: https://github.com/jantimon/html-webpack-plugin/tree/master/examples/custom-template
+* INSTALAR: npm install --save-dev html-loader
+* USO: en el html 
 ```
-const FileIncludeWebpackPlugin = require('file-include-webpack-plugin')
-
-module.exports = {
-  plugins: [
-    new FileIncludeWebpackPlugin(
-      {
-        source: './src/templates', // relative path to your templates
-        replace: [{
-          regex: /\[\[FILE_VERSION]]/, // additional things to replace
-          to: 'v=1.0.0',
-        }],
-      },
-    )
-  ]
-}
-
+<%= require('html-loader!./partial.html') %>
 ````
