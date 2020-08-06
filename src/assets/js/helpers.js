@@ -7,8 +7,47 @@
  * smoothScroll: hace smothscroll hacia el tag 
  * getOffset: calcula la posicion de un elemento
  * browserDetection: devuelve el browser
+ * viewportsOnWrapper: chequea el width del wrapper y agrega clases para hacerlo responsive
 */
 
+//chequea el width del wrapper y agrega clases para hacerlo responsive
+function viewportsOnWrapper(siteWrapper, breakpoints={xs: 576,sm: 767,md: 991,lg:1199, xlg:1500}) {
+    
+    if ( siteWrapper.classList.contains('responsive-wrapper') ) {
+
+        insertBreakPoinsts(siteWrapper);
+
+        window.addEventListener('resize', function(){
+            insertBreakPoinsts(siteWrapper);
+        })
+        
+    }
+
+
+    function insertBreakPoinsts(wrapper) {
+        const width = wrapper.getBoundingClientRect().width;
+
+        wrapper.classList.remove('xlg');
+        wrapper.classList.remove('lg');
+        wrapper.classList.remove('md');
+        wrapper.classList.remove('sm');
+        wrapper.classList.remove('xs');
+
+        if (width>breakpoints.xlg) {
+            wrapper.classList.add('xlg');
+        } else if (width>breakpoints.lg) {
+            wrapper.classList.add('lg');
+        } else if (width>breakpoints.md) {
+            wrapper.classList.add('md');
+        } else if (width>breakpoints.sm) {
+            wrapper.classList.add('sm');
+        } else if (width>breakpoints.xs) {
+            wrapper.classList.add('xs');
+        }
+
+    }
+
+}
 
 //envia la altura hacia el parent, si esta en un iframe es util
 function sendHeight(){
@@ -267,4 +306,4 @@ function browserDetection() {
 }
 
 
-export {sendHeight, loadLazyImages, isVisible, smoothScroll, getOffset, browserDetection}
+export {viewportsOnWrapper, sendHeight, loadLazyImages, isVisible, smoothScroll, getOffset, browserDetection}
