@@ -1,3 +1,8 @@
 import './assets/css/style.scss';
 
-console.log('script')
+import { loadLazyImages } from './assets/js/helpers';
+
+
+document.addEventListener('DOMContentLoaded', function(){
+    loadLazyImages();
+});
