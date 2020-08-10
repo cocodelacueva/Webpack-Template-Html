@@ -2,6 +2,10 @@
 
 Para trabajar con html sencillo, tipo landing pages. Permite la transpilación de js, transforma el sass al css con autoprefixer. Y además copia los html de la carpeta html.
 
+## Responsive base JS
+
+Esta página se armo con responsive basado en una funcion de js en vez de utilizar media queries. Esto hace que al estar dentro de un contenedor tome el ancho del contenedor y no el del viewport.
+
 ## Pluggins dev incluídos
 
 A grandes rasgos:  
