@@ -1,7 +1,10 @@
 @import 'sass/reset';
 @import 'sass/fonts';
 @import 'sass/variables';
-@import 'sass/helpers';
+
+.site-wrapper {
+    @import 'sass/reset';
+}
 
 .site-wrapper {
     position: relative;
@@ -13,7 +16,11 @@
     font-weight: 400;
     background-color: $color-blanco;
     color: $color-negro;
+    overflow-x: hidden;
 }//.main-wrapper
 
-@import 'sass/footer';
-@import 'sass/header';
+
+.site-wrapper {
+    @import 'sass/helpers';
+    @import 'sass/page-styles';
+}
