@@ -21,6 +21,7 @@
 
 
 .site-wrapper {
+    @import 'sass/mixins';
     @import 'sass/helpers';
     @import 'sass/page-styles';
 }
