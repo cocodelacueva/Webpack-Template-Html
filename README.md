@@ -77,3 +77,23 @@ Lo que hace es cargar como string un html. Por lo que permite utilizarlo en js. 
 Esto permite dividir el bundle script si es muy grande. Hay muchísimas opciones y depende un poco el trabajo que se está haciendo.  
 
 LEER: https://webpack.js.org/guides/code-splitting/  
+
+
+### Webpack bundle analyzer
+
+npm install --save-dev webpack-bundle-analyzer
+
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+
+module.exports = {
+  plugins: [
+    new BundleAnalyzerPlugin(
+      {
+        analyzerMode:  'static', //para que lo haga sólo al momento de hacer el build
+		    openAnalyzer:  true, //para que nos muestre el resultado inmediatamente
+      }
+    )
+  ]
+}
+
+Cuando se ejecuta el npm run build te muestra el resultado en un html report.html en la carpeta public.
