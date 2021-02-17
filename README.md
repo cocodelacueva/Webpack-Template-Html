@@ -72,7 +72,74 @@ Lo que hace es cargar como string un html. Por lo que permite utilizarlo en js. 
 ```
 <%= require('html-loader!./partial.html') %>
 ````
-## Dividir codigo
+
+### Localization with webpack
+
+Para utilizar localization de las pagina es necesario utilizar el pluggin "webpack-static-i18n-plugin". El mismo funciona con la etiqueta data-t. y varios archivos .json que definen los lenguajes de estas etiquetas.
+
+https://github.com/BenceSzalai/webpack-static-i18n-plugin
+
+#### USO:
+
+1 Instalamos pluggin:
+
+```bash
+yarn add -D webpack-static-i18n-plugin
+```
+
+```bash
+npm install --save webpack-static-i18n-plugin
+```
+
+2 en la carpeta src, creamos una carpeta locales con los distintos .json con los lenguajes:
+
+```json
+{
+    "head": {
+      "title": "Dealership"
+    },
+    "component": {
+      "heading": "For sale",
+      "note": "Only the best",
+      "link": {
+        "url": "http://www.google.com",
+        "title": "Google.com"
+      }
+    }
+  }
+```
+
+3 En el archivo "webpack.config.js" le agregamos la configuración.
+
+```js
+const WebpackStaticI18NPlugin = require('webpack-static-i18n-plugin');
+```
+
+```js
+pluggins: [
+  //debajo de HtmlWebpackPlugin()
+  new WebpackStaticI18NPlugin({
+      locale : 'en', // The default locale
+      locales: ['en', 'de'],
+      outputDefault: '__file__', // default: '__file__'
+      outputOther  : '__lng__-__file__', // default: '__lng__/__file__'
+      localesPath  : path.join(__dirname, 'src/locales/'),
+      files        : '*.html',
+  })
+]
+```
+
+4 Finalmente en el html definimos las etiquetas
+
+```html
+<title data-t="head.title"></title>
+ <span data-t>component.heading</span>
+ <span data-t>component.note</span>
+ <p><a data-attr-t href-t="component.link.url" data-t="component.link.title"></a></p>
+```
+
+
+## Dividir codigo  
 
 Esto permite dividir el bundle script si es muy grande. Hay muchísimas opciones y depende un poco el trabajo que se está haciendo.  
 
