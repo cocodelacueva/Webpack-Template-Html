@@ -97,3 +97,19 @@ module.exports = {
 }
 
 Cuando se ejecuta el npm run build te muestra el resultado en un html report.html en la carpeta public.
+
+## Ramas de este repo:
+* **breakpoint-containers**: Esta rama sirve para romper las media queries y utilizar el ancho del div contenedor en vez del viewport. De esta manera se puede insertar toda la pagina dentro de otro sitio, y aunque el sitio tenga barras laterales, no se rompera el diseño responsivo.
+
+
+
+## Fallo en node 15
+
+Si se tiene instalado node 15 en el sistema y tira un error al compilar. Hay que mirar los paquetes. Mirando el package.json chequear si css-loader es una version mayor 5, sass-loader es mayor a 10 y node-sass es mayor a 5. Si no es asi, hay que actualizar. Se puede con npm o yarn de acuerdo lo que estemos usando:
+```bash
+yarn add css-loader@5.0.1 sass-loader@10.1.0 node-sass@5.0.0
+```
+
+```bash
+npm install css-loader@5.0.1 sass-loader@10.1.0 node-sass@5.0.0
+```
