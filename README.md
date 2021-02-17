@@ -2,6 +2,8 @@
 
 Para trabajar con html sencillo, tipo landing pages. Permite la transpilación de js, transforma el sass al css con autoprefixer. Y además copia los html de la carpeta html.
 
+**Esta rama sirve para romper las media queries y utilizar el ancho del div contenedor en vez del viewport. De esta manera se puede insertar toda la pagina dentro de otro sitio, y aunque el sitio tenga barras laterales, no se rompera el diseño responsivo.**
+
 ## Responsive base JS
 
 Esta página se armo con responsive basado en una funcion de js en vez de utilizar media queries. Esto hace que al estar dentro de un contenedor tome el ancho del contenedor y no el del viewport.
@@ -81,3 +83,18 @@ Lo que hace es cargar como string un html. Por lo que permite utilizarlo en js. 
 Esto permite dividir el bundle script si es muy grande. Hay muchísimas opciones y depende un poco el trabajo que se está haciendo.  
 
 LEER: https://webpack.js.org/guides/code-splitting/  
+
+## Ramas de este repo:
+
+* **breakpoint-containers**: Esta rama sirve para romper las media queries y utilizar el ancho del div contenedor en vez del viewport. De esta manera se puede insertar toda la pagina dentro de otro sitio, y aunque el sitio tenga barras laterales, no se rompera el diseño responsivo.
+
+## Fallo en node 15
+
+Si se tiene instalado node 15 en el sistema y tira un error al compilar. Hay que mirar los paquetes. Mirando el package.json chequear si css-loader es una version mayor 5, sass-loader es mayor a 10 y node-sass es mayor a 5. Si no es asi, hay que actualizar. Se puede con npm o yarn de acuerdo lo que estemos usando:
+```bash
+yarn add css-loader@5.0.1 sass-loader@10.1.0 node-sass@5.0.0
+```
+
+```bash
+npm install css-loader@5.0.1 sass-loader@10.1.0 node-sass@5.0.0
+```
